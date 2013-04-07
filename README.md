@@ -2,6 +2,16 @@
 
 An ActiveRecord-like interface to databases with a JSON based Soda2 interface, and example of which is the NYC OpenData set.
 
+##Install
+
+Install the gem from rubygems 
+
+    $ gem install sodacan
+
+Require it as needed
+
+    require 'sodacan'
+
 ##Usage
 
 A new database should be added to an application by subclassing SodaCan::Base
