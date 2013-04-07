@@ -1,3 +1,3 @@
-#SOQLMapper
+#SodaMapper
 
-An ActiveRecord-like interface to SOQL databases
+An ActiveRecord-like interface to databases with a Soda2 interface
