@@ -36,7 +36,7 @@ module SodaCan
 
       @@url = nil
 
-      def all
+      def many
         send_query @@url
       end
 
