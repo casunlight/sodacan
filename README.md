@@ -1,4 +1,4 @@
-#SodaMapper
+#SodaCan
 
 An ActiveRecord-like interface to databases with a JSON based Soda2 interface, and example of which is the NYC OpenData set.
 
@@ -43,7 +43,7 @@ Returns an array of instances where the field represented by the key in the para
 
 Returns a hash of field names and types found in the instance
 
-###_fieldname
+###accessors
 
 Depending upon the record being accessed a number of accessor methods are created for the instance, allowing access to the fields.
 
@@ -56,4 +56,5 @@ Depending upon the record being accessed a number of accessor methods are create
 
     first = MyDB.find 1
     bananas = MyDB.search "banana"
+    bananas.first.calories # calorie count of the first banana
     fruit = MyDB.where(food_group: 'fruit')
