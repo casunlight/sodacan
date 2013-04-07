@@ -13,6 +13,11 @@ module SOQLMapper
       self.where(id: id).first
     end
 
+    def self.execute (soql)
+      @query = "#{@@url}?$query=#{soql}"
+      self.send_query @query
+    end
+
     def self.where (params)
       @query = "#{@@url}?"
 
