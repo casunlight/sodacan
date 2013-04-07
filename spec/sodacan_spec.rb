@@ -1,7 +1,6 @@
 require 'spec_helper'
-require 'pry'
 
-describe SOQLMapper::Base do
+describe SodaCan::Base do
   before do
   end
 
