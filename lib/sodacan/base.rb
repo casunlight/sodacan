@@ -70,7 +70,11 @@ module SodaCan
           query << "$where="
 
           query = params.to_a.reduce(query) do |q,pair|
-            q << "#{ pair[0] }=\"#{ pair[1] }\"&"
+            if pair[1].is_a? Numeric
+              q << "#{ pair[0] }=#{ pair[1] }&"
+            else
+              q << "#{ pair[0] }=\"#{ pair[1] }\"&"
+            end
           end
           query = query[0..-2]
         end
