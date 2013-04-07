@@ -2,6 +2,8 @@ module SodaCan
   class Base
 
     def initialize (data, fields)
+      
+      used_fields = {}
       data.each do |key,val|
         method_name = key.to_sym
 
@@ -18,11 +20,15 @@ module SodaCan
           end
         when "location"
           val = Location.new val
+        when "calendar_date"
+          val = Time.new val
         end
 
+        used_fields[method_name] = fields[method_name]
         define_singleton_method(method_name){ val }
-        define_singleton_method(:fields){ fields }
       end
+
+      define_singleton_method(:_fields){ used_fields }
     end
 
 
