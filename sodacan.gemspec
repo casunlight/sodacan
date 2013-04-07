@@ -6,8 +6,8 @@ require 'sodacan/version'
 Gem::Specification.new do |spec|
   spec.name          = "sodacan"
   spec.version       = SodaCan::VERSION
-  spec.authors       = ["Trevor John, tjohn", "Tyler Heck, theck01"]
-  spec.email         = ["tyler.heck@gmail.com"]
+  spec.authors       = ["Trevor John", "Tyler Heck"]
+  spec.email         = ["tyler.heck+sodacan@gmail.com"]
   spec.description   = %q{Wrapper to make ActiveRecord type queries on Soda2 interfaces.}
   spec.summary       = %q{SOQL Wrapper for JSON Soda 2 interfaces}
   spec.homepage      = "http://rubygems.org/gems/sodacan"
