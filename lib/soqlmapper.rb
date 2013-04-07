@@ -6,7 +6,7 @@ module SOQLMapper
     @@url = nil
 
     def self.connect (url)
-      @@url = url
+      @@url = url.to_s
     end
 
     def self.find (id)
