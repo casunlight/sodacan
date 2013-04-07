@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name        = 'SodaCan'
-  s.version     = '0.0.1'
-  s.date        = '2013-04-06'
+  s.version     = '0.0.2'
+  s.date        = '2013-04-07'
   s.summary     = "SOQL Wrapper for JSON Soda 2 interfaces"
   s.description = "Wrapper to make ActiveRecord type queries on Soda2 interfaces."
   s.authors     = ["Trevor John", "Tyler Heck"]
