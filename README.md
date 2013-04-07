@@ -17,33 +17,33 @@ This new class comes with a host of query methods out of the box. Before queryin
 
 All query methods are class methods on a DB class. Query methods return instances of the DB class, just like ActiveRecord.
 
-###many
+###.many
 
 Returns an array of up to the first 1000 instances in the database
 
-###execute _query_
+###.execute _query_
 
 Returns the instances retrieved as a result of sending the query to the database
 
-###find _id_
+###.find _id_
 
 Returns the instance in the database with the given ID, nil if the id is not found
 
-###search _term_
+###.search _term_
 
 Returns an array of any instances that have the term string as a value for any field. Search works only for full tokens in the database. "ban" will match "ban on apples" but not "bananas are good"
 
-###where _params_
+###.where _params_
 
 Returns an array of instances where the field represented by the key in the params hash has the value represented by the value in the params hash
 
 ##Instance methods
 
-###\_fields
+###\#\_fields
 
 Returns a hash of field names and types found in the instance
 
-###accessors
+###\#accessors
 
 Depending upon the record being accessed a number of accessor methods are created for the instance, allowing access to the fields.
 
