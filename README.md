@@ -1,4 +1,4 @@
-#SodaCan
+#sodacan
 
 An ActiveRecord-like interface to databases with a JSON based Soda2 interface, and example of which is the NYC OpenData set.
 
