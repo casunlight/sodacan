@@ -55,34 +55,23 @@ module SodaMapper
 
     # INSTANCE METHODS
     def initialize (data, fields)
-      @data = data.reduce({}) do |memo,pair|
-        key = pair[0].to_sym
-        val = nil
+      data.each do |key,val|
+        method_name = key.to_sym
 
-        case fields[key]
+        case fields[method_name]
         when "number"
-          val = BigDecimal(pair[1])
+          val = BigDecimal(val)
         when "double"
-          val = Float(pair[1])
+          val = Float(val)
         when "boolean"
-          if pair[1] =~ /(true|1)/
+          if val =~ /(true|1)/
             val = true
           else
             val = false
           end
-        else 
-          val = pair[1]
         end
 
-        memo[key] = val
-        memo
-      end
-    end
-    
-    def method_missing (method, *args)
-      if @data.has_key?(method)
-        define_method(method){ @data[method] }
-        @data[method]
+        define_singleton_method(method_name){ val }
       end
     end
 
