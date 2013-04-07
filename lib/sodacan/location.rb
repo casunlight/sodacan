@@ -1,12 +1,8 @@
 module SodaCan
   class Location
     def initialize (params)
-      lat = nil
-      lat = Float(params['latitude']) if params['latitude']
-      long = nil
-      long = Float(params['longitude']) if params['longitude']
-      define_singleton_method(:latitude){ lat }
-      define_singleton_method(:longitude){ long }
+      define_singleton_method(:latitude){ params['latitude'].to_f }
+      define_singleton_method(:longitude){ params['longitude'].to_f }
     end
   end
 end
