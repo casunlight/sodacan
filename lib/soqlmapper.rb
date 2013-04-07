@@ -33,6 +33,11 @@ module SOQLMapper
       self.send_query @query
     end
 
+    def self.all
+      self.send @@url
+    end
+
+
     protected
 
     def self.send_query (query)
