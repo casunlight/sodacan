@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'SodaCan'
-  s.version     = '0.0.2'
+  s.version     = '0.0.3'
   s.date        = '2013-04-07'
   s.summary     = "SOQL Wrapper for JSON Soda 2 interfaces"
   s.description = "Wrapper to make ActiveRecord type queries on Soda2 interfaces."
@@ -12,5 +12,5 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency "json", ["= 1.7.7"]
   s.add_runtime_dependency "rest-client", ["= 1.6.7"]
   s.homepage    =
-    'http://rubygems.org/gems/sodacan'
+    'http://rubygems.org/gems/SodaCan'
 end
