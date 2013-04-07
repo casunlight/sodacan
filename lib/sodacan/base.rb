@@ -2,7 +2,7 @@ module SodaCan
   class Base
 
     def initialize (data, fields)
-      
+
       used_fields = {}
       data.each do |key,val|
         method_name = key.to_sym
